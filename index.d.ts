@@ -76,7 +76,7 @@ declare module 'react-native-nfc-manager' {
   interface NfcManager {
     start(): Promise<void>;
 
-    isSupported(): Promise<boolean>;
+    isSupported(tech?: NfcTech): Promise<boolean>;
 
     registerTagEvent(options?: RegisterTagEventOpts): Promise<void>;
 
